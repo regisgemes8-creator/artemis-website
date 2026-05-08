@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artemis — DonutSMP Client</title>
+  <meta name="description" content="Artemis — 165+ modules. Crystal PvP, full ESP, DonutSMP economy automation. Fabric 1.21.1. Free forever." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="noise"></div>
+
+  <!-- ANNOUNCE BAR -->
+  <div id="announce-bar">
+    <div class="announce-inner">
+      <span class="announce-dot"></span>
+      <span class="announce-text"><strong>v1.0 is live</strong> &nbsp;·&nbsp; Fabric 1.21.1 &nbsp;·&nbsp; 165+ modules &nbsp;·&nbsp; DonutSMP</span>
+      <a href="#download" class="announce-cta">Download →</a>
+      <button id="announce-close" class="announce-close" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">
+        <svg class="logo-hex" viewBox="0 0 40 40" fill="none">
+          <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polygon points="20,9 30,15 30,25 20,31 10,25 10,15" fill="currentColor" opacity="0.18"/>
+          <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-size="13" font-family="Bebas Neue" fill="currentColor">A</text>
+        </svg>
+        <span>ARTEMIS</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#modules">Modules</a>
+        <a href="#install">Install</a>
+        <a href="#changelog">Changelog</a>
+        <a href="#faq">FAQ</a>
+        <a href="#download" class="nav-dl">Download</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#features">Features</a>
+    <a href="#modules">Modules</a>
+    <a href="#install">Install</a>
+    <a href="#changelog">Changelog</a>
+    <a href="#faq">FAQ</a>
+    <a href="#download" class="mobile-dl">Download Free</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-wrap">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>v1.0.0 &nbsp;·&nbsp; Fabric 1.21.1 &nbsp;·&nbsp; DonutSMP</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-main">ARTEMIS</span>
+          <span class="title-rule"></span>
+          <span class="title-sub">MINECRAFT CLIENT</span>
+        </h1>
+        <p class="hero-desc">
+          The most complete free client on <strong>DonutSMP</strong>. 165+ modules covering crystal PvP macros, full ESP, movement, world tools, server economy automation, and a deep HUD system. Drop the .jar and dominate.
+        </p>
+        <div class="hero-btns">
+          <a href="#download" class="btn-main">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 3v10M5 9l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Download Free
+          </a>
+          <a href="#modules" class="btn-outline">Browse Modules</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-n" data-to="165">0</span>
+            <span class="stat-l">Modules</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-n" data-to="7">0</span>
+            <span class="stat-l">Categories</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-n" data-to="20">0</span>
+            <span class="stat-l">DonutSMP Tools</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-n" data-to="100">0</span>
+            <span class="stat-l">% Free</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-orb">
+          <div class="orb-ring r1"></div>
+          <div class="orb-ring r2"></div>
+          <div class="orb-ring r3"></div>
+          <div class="orb-ring r4"></div>
+          <div class="orb-core">
+            <svg viewBox="0 0 60 60" fill="none">
+              <polygon points="30,4 54,17 54,43 30,56 6,43 6,17" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <polygon points="30,14 46,23 46,37 30,46 14,37 14,23" fill="currentColor" opacity="0.15"/>
+              <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-size="20" font-family="Bebas Neue" fill="currentColor">A</text>
+            </svg>
+          </div>
+          <div class="orb-dot d1"></div>
+          <div class="orb-dot d2"></div>
+          <div class="orb-dot d3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint"><span>SCROLL</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>⚔ Crystal PvP Macros</span><span class="tsep">◈</span>
+      <span>👁 Full ESP Suite</span><span class="tsep">◈</span>
+      <span>🍩 DonutSMP Economy</span><span class="tsep">◈</span>
+      <span>🏃 Advanced Movement</span><span class="tsep">◈</span>
+      <span>⚙ Full Automation</span><span class="tsep">◈</span>
+      <span>🌍 World Tools</span><span class="tsep">◈</span>
+      <span>🖥 HUD Editor</span><span class="tsep">◈</span>
+      <span>🔓 Free Forever</span><span class="tsep">◈</span>
+      <span>165+ Modules</span><span class="tsep">◈</span>
+      <span>⚔ Crystal PvP Macros</span><span class="tsep">◈</span>
+      <span>👁 Full ESP Suite</span><span class="tsep">◈</span>
+      <span>🍩 DonutSMP Economy</span><span class="tsep">◈</span>
+      <span>🏃 Advanced Movement</span><span class="tsep">◈</span>
+      <span>⚙ Full Automation</span><span class="tsep">◈</span>
+      <span>🌍 World Tools</span><span class="tsep">◈</span>
+      <span>🖥 HUD Editor</span><span class="tsep">◈</span>
+      <span>🔓 Free Forever</span><span class="tsep">◈</span>
+      <span>165+ Modules</span><span class="tsep">◈</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="section-label">// CAPABILITIES</div>
+      <h2 class="section-title">Built <em>different</em>.</h2>
+      <div class="feat-grid">
+        <div class="feat-card feat-wide reveal">
+          <div class="feat-glow"></div>
+          <div class="feat-icon">⚔</div>
+          <h3>Crystal PvP Suite</h3>
+          <p>The most complete crystal PvP toolkit on the server. Automated anchor placement macros, double-anchor explosion chains, obsidian surround maintenance, instant hole-fill the moment an enemy steps to safety, and a full CrystalAura with intelligent target prioritisation and swing timing calibrated to server TPS.</p>
+          <div class="feat-chips"><span>AnchorMacro</span><span>DoubleAnchor</span><span>CrystalAura</span><span>SurroundHold</span><span>HoleFill</span><span>CrystalESP</span></div>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon">👁</div>
+          <h3>Full ESP Suite</h3>
+          <p>Player outlines through any terrain, BaseESP via chunk-load analysis, StorageESP, HoleESP, CrystalESP, Tracers, and enhanced Nametags with health, armour, and ping. See everything.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon">🍩</div>
+          <h3>DonutSMP Economy</h3>
+          <p>20 modules wired into DonutSMP's server economy: auction sniper, auto-shop, crate opener, mob coin farming loop, balance HUD, island finder, bone order automation.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon">🏃</div>
+          <h3>Movement Suite</h3>
+          <p>Speed, BHop, Fly, LiquidWalk, Step, Phase, NoSlow, LongJump, FastLadder, AirJump, Sprint, AutoSneak, BoatFly, GlideFlight and more. Built for both performance and bypass.</p>
+        </div>
+        <div class="feat-card reveal">
+          <div class="feat-icon">⚙</div>
+          <h3>Full Automation</h3>
+          <p>AFK farming, auto-mining, auto-fishing, tree farming, elytra autopilot, A* pathfinding to waypoints, chest stealing, base digging via schematics, and auto-reconnect loop. Go completely idle.</p>
+        </div>
+        <div class="feat-card feat-wide reveal">
+          <div class="feat-glow"></div>
+          <div class="feat-icon">🛡</div>
+          <h3>Combat Safety Net</h3>
+          <p>AutoTotem swaps the instant you hit near-death. AutoLog disconnects below a health threshold before you die. AutoGapple pops a golden apple on low health. ArmorAlert notifies on critical durability. You focus on the fight — Artemis keeps you alive automatically.</p>
+          <div class="feat-chips"><span>AutoTotem</span><span>AutoLog</span><span>AutoGapple</span><span>ArmorAlert</span><span>AutoEat</span><span>PearlTimer</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section id="modules">
+    <div class="container">
+      <div class="section-label">// MODULES</div>
+      <h2 class="section-title">165+ modules. <em>Zero fluff.</em></h2>
+      <div class="mod-controls">
+        <div class="mod-filters" id="mod-filters">
+          <button class="flt active" data-cat="all">All</button>
+          <button class="flt" data-cat="combat">⚔ Combat</button>
+          <button class="flt" data-cat="movement">🏃 Movement</button>
+          <button class="flt" data-cat="visual">👁 Visual</button>
+          <button class="flt" data-cat="utility">⚙ Utility</button>
+          <button class="flt" data-cat="world">🌍 World</button>
+          <button class="flt" data-cat="donut">🍩 DonutSMP</button>
+          <button class="flt" data-cat="client">🖥 Client</button>
+        </div>
+        <div class="mod-search-wrap">
+          <svg viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M12 12l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input type="text" id="mod-search" placeholder="Search modules…" autocomplete="off" spellcheck="false" />
+          <span id="mod-count" class="mod-count">165</span>
+        </div>
+      </div>
+      <div class="mod-grid" id="mod-grid"></div>
+      <div class="mod-empty hidden" id="mod-empty">No modules match your search.</div>
+    </div>
+  </section>
+
+  <!-- INSTALL -->
+  <section id="install">
+    <div class="container">
+      <div class="section-label">// INSTALLATION</div>
+      <h2 class="section-title">Up in <em>60 seconds</em>.</h2>
+      <div class="install-steps">
+        <div class="install-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Install Fabric 1.21.1</h3>
+            <p>Download the Fabric installer, select Minecraft <code>1.21.1</code>, click Install. Launch Minecraft once with the new Fabric profile to generate the mods folder.</p>
+            <a href="https://fabricmc.net/use/" target="_blank" rel="noopener" class="step-link">fabric installer →</a>
+          </div>
+        </div>
+        <div class="install-connector"></div>
+        <div class="install-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Drop the .jar</h3>
+            <p>Download <code>artemis-1.0.0.jar</code> below and place it in <code>.minecraft/mods/</code>. No other dependencies or Fabric API required.</p>
+            <a href="#download" class="step-link">download artemis →</a>
+          </div>
+        </div>
+        <div class="install-connector"></div>
+        <div class="install-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Launch &amp; Configure</h3>
+            <p>Launch with the Fabric 1.21.1 profile. Press <code>Right Shift</code> to open ClickGUI. Toggle modules, set keybinds, and join DonutSMP.</p>
+            <span class="step-link">right shift → clickgui</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANGELOG -->
+  <section id="changelog">
+    <div class="container">
+      <div class="section-label">// CHANGELOG</div>
+      <h2 class="section-title">What's <em>new</em>.</h2>
+      <div class="changelog-list">
+        <div class="cl-entry reveal">
+          <div class="cl-meta">
+            <span class="cl-ver">v1.0.0</span>
+            <span class="cl-badge new">NEW</span>
+          </div>
+          <div class="cl-body">
+            <h3>Initial Release</h3>
+            <ul>
+              <li>165+ modules across 7 categories launched</li>
+              <li>Full crystal PvP macro suite — AnchorMacro, DoubleAnchor, SafeAnchor, CrystalAura</li>
+              <li>20 DonutSMP-exclusive economy modules including AuctionSniper and MobCoinFarm</li>
+              <li>Complete Movement suite — Speed, BHop, Fly, Phase, NoSlow, BoatFly and more</li>
+              <li>World tools — TerrainFlattener, AutoBridge, CraterMaker, WallBuilder, TunnelMiner</li>
+              <li>ClickGUI with full drag-drop HUD editor and Config Manager profiles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry reveal">
+          <div class="cl-meta">
+            <span class="cl-ver">v0.9.2</span>
+            <span class="cl-badge beta">BETA</span>
+          </div>
+          <div class="cl-body">
+            <h3>Combat Overhaul + ESP Rework</h3>
+            <ul>
+              <li>Rewrote CrystalAura target logic — faster, smarter prioritisation</li>
+              <li>Added BowAimbot with predictive trajectory for moving targets</li>
+              <li>HoleESP now renders bedrock vs obsidian holes in distinct colours</li>
+              <li>BaseESP sensitivity tuning — significantly fewer false positives</li>
+              <li>AntiKB per-axis toggle for surgical knockback control</li>
+              <li>Fixed AutoTotem swapping too late on high-ping/low-TPS servers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cl-entry reveal">
+          <div class="cl-meta">
+            <span class="cl-ver">v0.9.0</span>
+            <span class="cl-badge beta">BETA</span>
+          </div>
+          <div class="cl-body">
+            <h3>DonutSMP Module Pack</h3>
+            <ul>
+              <li>Entire DonutSMP-specific category added (20 modules)</li>
+              <li>AuctionSniper with real-time AH monitoring and price threshold</li>
+              <li>MobCoinFarm: full kill-collect-bank automation loop</li>
+              <li>RTPBaseFinder: random teleport scouting with coordinate logging</li>
+              <li>BalanceCheck HUD: live economy balance display</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / SPECS -->
+  <section id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text reveal">
+          <div class="section-label">// ABOUT</div>
+          <h2 class="section-title">Made for <em>donut</em>.</h2>
+          <p>Artemis is a free, open-source Fabric mod built specifically for the DonutSMP experience. Every module was designed around the server's meta — from crystal PvP mechanics to the auction house economy, base-finding strategies, and the mob coin grind loop.</p>
+          <p>No paid tiers. No watermarks. No trackers. No ads. Just drop the .jar and go. It stays free, forever.</p>
+          <div class="about-tags">
+            <span>Fabric Mod</span><span>1.21.1</span><span>DonutSMP</span>
+            <span>Open Source</span><span>Free Forever</span><span>No Ads</span>
+          </div>
+        </div>
+        <div class="about-specs reveal">
+          <div class="spec-row"><span class="sk">Client Name</span><span class="sv">Artemis</span></div>
+          <div class="spec-row"><span class="sk">Version</span><span class="sv accent">1.0.0</span></div>
+          <div class="spec-row"><span class="sk">Minecraft</span><span class="sv">1.21.1</span></div>
+          <div class="spec-row"><span class="sk">Loader</span><span class="sv">Fabric</span></div>
+          <div class="spec-row"><span class="sk">Platform</span><span class="sv">Windows / Mac / Linux</span></div>
+          <div class="spec-row"><span class="sk">Total Modules</span><span class="sv accent">165+</span></div>
+          <div class="spec-row"><span class="sk">Categories</span><span class="sv accent">7</span></div>
+          <div class="spec-row"><span class="sk">DonutSMP Modules</span><span class="sv accent">20</span></div>
+          <div class="spec-row"><span class="sk">Price</span><span class="sv green">FREE</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-label">// FAQ</div>
+      <h2 class="section-title">Common <em>questions</em>.</h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>Is Artemis actually free?</span><svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Yes, completely. No paid tiers, no premium modules behind a paywall, no subscriptions. Every single module is available to everyone at no cost. It stays free.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>Does it work on servers other than DonutSMP?</span><svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Most modules work on any Fabric 1.21.1 server. The 🍩 DonutSMP category is built specifically for that server's economy commands. Everything else — combat, movement, ESP, utility, world — works anywhere.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>How do I open the GUI in-game?</span><svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Press <code>Right Shift</code> to open ClickGUI — a full graphical panel with all 7 categories, live search, sliders, and toggles. Press <code>Tab</code> for the compact TabGUI overlay.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>Do I need Fabric API or other mods?</span><svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>No external dependencies at all. Just Fabric loader 1.21.1 and the Artemis .jar in your mods folder. That's it.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>Can I save different configs for different situations?</span><svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Yes. The Config Manager module lets you save named profiles — one for crystal PvP, one for AFK farming, one for DonutSMP economy grind. Switch between them instantly without reconfiguring anything.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>How do I report bugs or request modules?</span><svg class="faq-arr" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="faq-a"><p>Open an issue on GitHub or ping us in the Discord server. DonutSMP-specific module requests are especially welcome since that's the primary focus of this client.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="container">
+      <div class="community-inner reveal">
+        <div class="community-glow"></div>
+        <div class="section-label">// COMMUNITY</div>
+        <h2 class="community-title">Join the <em>server</em>.</h2>
+        <p class="community-desc">Updates, module drops, bug reports, and the full DonutSMP meta — all in one place.</p>
+        <div class="community-btns">
+          <a href="#" class="btn-main">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+            Discord Server
+          </a>
+          <a href="#" class="btn-outline">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.699 1.028 1.591 1.028 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="dl-inner reveal">
+        <div class="dl-glow"></div>
+        <div class="section-label">// DOWNLOAD</div>
+        <h2 class="dl-title">Ready when you are.</h2>
+        <p class="dl-sub">Drop <code>artemis-1.0.0.jar</code> into <code>.minecraft/mods/</code>. Launch Fabric 1.21.1. Done.</p>
+        <a href="#" class="btn-main btn-xl" id="dl-btn">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 3v10M5 9l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Download Artemis v1.0.0
+        </a>
+        <div class="dl-meta">
+          <span>Fabric 1.21.1</span><span class="dot-sep">·</span>
+          <span>No account</span><span class="dot-sep">·</span>
+          <span>No installer</span><span class="dot-sep">·</span>
+          <span>Always free</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg class="logo-hex sm" viewBox="0 0 40 40" fill="none">
+              <polygon points="20,2 36,11 36,29 20,38 4,29 4,11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-size="13" font-family="Bebas Neue" fill="currentColor">A</text>
+            </svg>
+            <span>ARTEMIS</span>
+          </div>
+          <p>The free DonutSMP client.<br/>165+ modules. Fabric 1.21.1.</p>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col"><span class="fl-head">Client</span><a href="#features">Features</a><a href="#modules">Modules</a><a href="#changelog">Changelog</a></div>
+          <div class="fl-col"><span class="fl-head">Help</span><a href="#install">Installation</a><a href="#faq">FAQ</a><a href="#">Discord</a></div>
+          <div class="fl-col"><span class="fl-head">Get It</span><a href="#download">Download</a><a href="#">GitHub</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">Built for DonutSMP &nbsp;·&nbsp; Free &amp; Open Source &nbsp;·&nbsp; Fabric 1.21.1</p>
+        <p class="footer-disc">Not affiliated with Mojang, Microsoft, or DonutSMP. Use at your own risk.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
