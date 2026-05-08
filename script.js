@@ -246,7 +246,6 @@
   const btn = document.getElementById('download-btn');
   if (!btn) return;
   btn.addEventListener('click', function (e) {
-    e.preventDefault();
     const rect = btn.getBoundingClientRect();
     const ripple = document.createElement('span');
     const size = Math.max(rect.width, rect.height) * 2;
